@@ -17,4 +17,15 @@ public class StatisticsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    void findMaxWhenIncreasing() {
+        ru.netology.statistic.StatisticsService service = new ru.netology.statistic.StatisticsService();
+
+        long[] incomes = {5, 5, 8, 4, 12, 3, 8, 6, 11, 11, 12};
+        long expected = 12;
+
+        long actual = service.findMax(incomes);
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
